@@ -1,0 +1,44 @@
+.loading-section {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 11;
+    position: fixed;
+    background-color: #090d22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    transition-duration: 0.25s;
+    transition-property: opacity;
+}
+
+.loading-section img {
+    width: 200px;
+}
+
+.loading-section .bar {
+    width: 25vw;
+    background-color: #3c9bee75;
+    position: relative;
+    border-radius: 20px;
+    height: 4px;
+}
+
+.loading-section .progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    background-color: #3c9bee;
+    height: 4px;
+    border-radius: 20px;
+    animation: 1.5s loading ease forwards;
+}
+
+@keyframes loading {
+    100% {
+        width: 100%;
+    }
+}

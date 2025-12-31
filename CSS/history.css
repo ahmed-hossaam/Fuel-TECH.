@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --color-primary: #7380ec;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-background: #f6f6f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 200vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+.container {
+    display: grid;
+    width: 95%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+
+}
+main{
+    padding: 0 1rem;
+
+}
+.insights{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+a {
+    color: var(--color-dark);
+}
+/* -----------------------  */
+.employee-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 50px;
+    
+}
+.employee-form input:focus{
+    outline:5px solid var(--color-light);
+}
+.employee-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 25px;
+    width: 100%;
+}
+.input-group {
+    display: flex;
+    gap: 20px;
+}
+
+.input-field {
+    flex: 1;
+    margin: 10px;
+}
+.job_position{
+    margin: 10px;
+}
+label {
+    display: block;
+    /* margin: 10px; */
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+.buttons .edit{
+    padding: 15px 45px;
+    background-color: #ccc;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+.buttons .edit:hover{
+    background-color: #dce1eb;
+
+}
+.buttons .save{
+    padding: 15px 45px;
+    background-color: #7380ec;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+.buttons .save:hover{
+    background-color: #a0aaff;
+
+}
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        width: 100%;
+    }
+    .input-group {
+        flex-direction: column;
+    }
+}
+@media (max-width: 425px) {
+    .buttons .edit,
+    .buttons .save{
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+}
+
+
+
+main .recent-orders {
+    margin-top: 2rem;
+}
+
+main .recent-orders h2 {
+    margin-bottom: 0.8rem;
+}
+
+main .recent-orders table,
+.employee-form  {
+    background: #fff;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    box-shadow: 0 2rem 3rem var(--color-light);
+    transition: all 300ms ease;
+    font-size: 1.2rem;
+    /* width: 100%; */
+    overflow-x: auto;
+
+}
+main .recent-orders table{
+    text-align: center;
+
+}
+
+main .recent-orders table:hover,.employee-form  {
+    /* cursor: pointer; */
+    box-shadow: none;
+}
+
+main table thead th {
+    padding: 10px 8px;
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 2px solid var(--color-light);
+    color: #677483;
+    padding: 15px 7px;
+}
+
+tr {
+    margin-bottom: 20px;
+
+}
+
+main table tbody tr:last-child td {
+    border: none;
+}
+
+main .recent-orders a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+
+.request-accept {
+    color: green;
+}
+.request-pending{
+    color: orange;
+}
+.request-refused{
+    color: red;
+}
+.services,
+.issues {
+    line-height: 2;
+}
+
+
+
+@media screen and (max-width: 1050px) {
+    main .recent-orders table {
+        padding: .9rem;
+        font-size: .95rem;
+        border-radius: 1.9rem
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    main .recent-orders table {
+        padding: .7rem;
+        font-size: .60rem;
+        border-radius: 1.5rem;
+    }
+}
+@media screen and (max-width: 585px) {
+    main .recent-orders table {
+        padding: .4rem;
+        font-size: .55rem;
+        border-radius: 1.3rem;
+    }
+
+    main table tbody td {
+        height: 3.3rem;
+    }
+
+    main table tbody .issues ,
+    main table tbody .date{
+        width: 50px;
+    }
+}
+.Pending {
+    color: #fcc44c;
+}
+.Accepted {
+    color: #28a745;
+}
+.Completed {
+    color: #00ff99;
+}
+.Cancelled {
+    color: #d83535;
+}

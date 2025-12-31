@@ -1,0 +1,13 @@
+let emailRegex = /^(?!.*\.\.)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+let emailInput = document.querySelector("#email");
+let form = document.querySelector("#reset_email");
+
+form.addEventListener("submit", (event) => {
+
+    if (!emailRegex.test(emailInput.value)) {
+
+        event.preventDefault();
+
+    }
+
+});
